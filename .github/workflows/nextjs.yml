@@ -72,6 +72,8 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
 
       - name: Build with Next.js
+        env:
+          NEXT_PUBLIC_API_URL: https://vison-employe-work-scheduler-with-privacy-wmc9.onrender.com
         run: npx --prefix frontend next build
 
       - name: Upload artifact
