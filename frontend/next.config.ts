@@ -3,6 +3,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: 'export',
   trailingSlash: true,
+  basePath: '/Task_Management',      // <-- Add this line
+  assetPrefix: '/Task_Management/',  // <-- Add this line
   images: {
     unoptimized: true,
   },
